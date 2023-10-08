@@ -1,2 +1,5 @@
 console.log(`alive`)
-console.log(`dev`)
+
+import * as jwt from "jsonwebtoken"
+let x : String  = jwt.sign({"a":1},"key") 
+console.log( x)
