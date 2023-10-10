@@ -1,5 +1,15 @@
-console.log(`alive`)
 
 import * as jwt from "jsonwebtoken"
-let x : String  = jwt.sign({"a":1},"key") 
-console.log( x)
+import { router } from "./routes"
+import { Server } from "./Server"
+
+require("dotenv").config()
+const PORT  = process.env.PORT
+const server = new Server("3000", router);
+server.start();
+
+
+
+
+
+
